@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from './Item'
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function List(){
 
@@ -14,7 +15,7 @@ function List(){
     return(<div>
         <input type="text" value={inputValue} onChange={event=> setInputValue(event.target.value)}/>
         <button onClick={handleAddItem}>+</button>
-        {itemlist.map( itemobj => <Item item={itemobj.item} isDone={itemobj.isDone} />  )}
+        {itemlist.map( itemobj => <Item key={uuidv4()} item={itemobj.item} isDone={itemobj.isDone} />  )}
     </div>);
 }
 
