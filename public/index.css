@@ -1,0 +1,11 @@
+.App {
+  background-color: aqua;
+}
+
+.strike-through{
+  text-decoration: line-through;
+}
+
+body{
+  margin: 0px;
+}
